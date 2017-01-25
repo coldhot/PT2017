@@ -13,3 +13,10 @@ Solve problems using python:
 * http://informatics.mccme.ru/mod/statements/view3.php?id=2685&chapterid=3124
 * http://informatics.mccme.ru/mod/statements/view3.php?id=2685&chapterid=3125
 * http://informatics.mccme.ru/mod/statements/view3.php?id=2685&chapterid=3126
+
+Anagrams
+___________
+
+Find all anagrams among russian words. Vocabulary is available in *anagrams* folder.
+
+Note: use **s.sort()**.
