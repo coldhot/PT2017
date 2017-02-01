@@ -1,113 +1,125 @@
-<table class="cs_container"><tbody><tr>
-    <!-- ngRepeat: col in cheatsheets --><td ng-repeat="col in cheatsheets" class="bigrow ng-scope">
-      <!-- ngRepeat: cs in col --><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Basics</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">.</td><td class="ng-binding">Any character except newline</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">a</td><td class="ng-binding">The character a</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">ab</td><td class="ng-binding">The string ab</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">a|b</td><td class="ng-binding">a or b</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">a*</td><td class="ng-binding">0 or more a's</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\</td><td class="ng-binding">Escapes a special character</td></tr>
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Quantifiers</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">*</td><td class="ng-binding">0 or more</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">+</td><td class="ng-binding">1 or more</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">?</td><td class="ng-binding">0 or 1</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">{2}</td><td class="ng-binding">Exactly 2</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">{2, 5}</td><td class="ng-binding">Between 2 and 5</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">{2,}</td><td class="ng-binding">2 or more</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(,5}</td><td class="ng-binding">Up to 5</td></tr>
-        
-        <tr ng-show="cs.extra"><td colspan="2" class="alert ng-binding">Default is greedy. Append ? for reluctant.</td></tr>
-      </tbody></table><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Groups</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(...)</td><td class="ng-binding">Capturing group</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?P&lt;Y&gt;...)</td><td class="ng-binding">Capturing group named Y</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?:...)</td><td class="ng-binding">Non-capturing group</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\Y</td><td class="ng-binding">Match the Y'th captured group</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?P=Y)</td><td class="ng-binding">Match the named group Y</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?#...)</td><td class="ng-binding">Comment</td></tr>
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table>
-    </td><td ng-repeat="col in cheatsheets" class="bigrow ng-scope">
-      <!-- ngRepeat: cs in col --><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Character Classes</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">[ab-d]</td><td class="ng-binding">One character of: a, b, c, d</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">[^ab-d]</td><td class="ng-binding">One character except: a, b, c, d</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">[\b]</td><td class="ng-binding">Backspace character</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\d</td><td class="ng-binding">One digit</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\D</td><td class="ng-binding">One non-digit</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\s</td><td class="ng-binding">One whitespace</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\S</td><td class="ng-binding">One non-whitespace</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\w</td><td class="ng-binding">One word character</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\W</td><td class="ng-binding">One non-word character</td></tr>
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Assertions</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">^</td><td class="ng-binding">Start of string</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\A</td><td class="ng-binding">Start of string, ignores m flag</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">$</td><td class="ng-binding">End of string</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\Z</td><td class="ng-binding">End of string, ignores m flag</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\b</td><td class="ng-binding">Word boundary</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\B</td><td class="ng-binding">Non-word boundary</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?=...)</td><td class="ng-binding">Positive lookahead</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?!...)</td><td class="ng-binding">Negative lookahead</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?&lt;=...)</td><td class="ng-binding">Positive lookbehind</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?&lt;!...)</td><td class="ng-binding">Negative lookbehind</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?()|)</td><td class="ng-binding">Conditional</td></tr>
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table><table class="mini-cheatsheet ng-scope ng-hide" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Escapes</th></tr>
-        <!-- ngRepeat: v in filtList -->
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table>
-    </td><td ng-repeat="col in cheatsheets" class="bigrow ng-scope">
-      <!-- ngRepeat: cs in col --><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Flags</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">i</td><td class="ng-binding">Ignore case</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">m</td><td class="ng-binding">^ and $ match start and end of line</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">s</td><td class="ng-binding">. matches newline as well</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">x</td><td class="ng-binding">Allow spaces and comments</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">L</td><td class="ng-binding">Locale character classes</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">u</td><td class="ng-binding">Unicode character classes</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">(?iLmsux)</td><td class="ng-binding">Set flags within regex</td></tr>
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Special Characters</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\n</td><td class="ng-binding">Newline</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\r</td><td class="ng-binding">Carriage return</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\t</td><td class="ng-binding">Tab</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\YYY</td><td class="ng-binding">Octal character YYY</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\xYY</td><td class="ng-binding">Hexadecimal character YY</td></tr>
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table><table class="mini-cheatsheet ng-scope ng-hide" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Posix Classes</th></tr>
-        <!-- ngRepeat: v in filtList -->
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table><table class="mini-cheatsheet ng-scope" ng-repeat="cs in col" ng-show="filtList = (cs.list | filter:{2:flavorModel.val} | filter:filterModel.val);filtList.length">
-        <tbody><tr><th colspan="2" class="ng-binding">Regular Expression Replacement</th></tr>
-        <!-- ngRepeat: v in filtList --><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\g&lt;0&gt;</td><td class="ng-binding">Insert entire match</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\g&lt;Y&gt;</td><td class="ng-binding">Insert match Y (name or number)</td></tr><tr ng-repeat="v in filtList" class="ng-scope">
-          <td style="white-space:nowrap" class="ng-binding">\Y</td><td class="ng-binding">Insert group numbered Y</td></tr>
-        
-        <tr ng-show="cs.extra" class="ng-hide"><td colspan="2" class="alert ng-binding"></td></tr>
-      </tbody></table>
-    </td>
-  </tr></tbody></table>
+Python Regular Expressions
+==============================
+
+Non-special chars match themselves. Exceptions are special characters::
+
+    \       Escape special char or start a sequence.
+    .       Match any char except newline, see re.DOTALL
+    ^       Match start of the string, see re.MULTILINE
+    $       Match end of the string, see re.MULTILINE
+    []      Enclose a set of matchable chars
+    R|S     Match either regex R or regex S.
+    ()      Create capture group, & indicate precedence
+
+After '``[``', enclose a set, the only special chars are::
+
+    ]   End the set, if not the 1st char
+    -   A range, eg. a-c matches a, b or c
+    ^   Negate the set only if it is the 1st char
+
+Quantifiers (append '``?``' for non-greedy)::
+
+    {m}     Exactly m repetitions
+    {m,n}   From m (default 0) to n (default infinity)
+    *       0 or more. Same as {,}
+    +       1 or more. Same as {1,}
+    ?       0 or 1. Same as {,1}
+
+Special sequences::
+
+    \A  Start of string
+    \b  Match empty string at word (\w+) boundary
+    \B  Match empty string not at word boundary
+    \d  Digit
+    \D  Non-digit
+    \s  Whitespace [ \t\n\r\f\v], see LOCALE,UNICODE
+    \S  Non-whitespace
+    \w  Alphanumeric: [0-9a-zA-Z_], see LOCALE
+    \W  Non-alphanumeric
+    \Z  End of string
+    \g<id>  Match prev named or numbered group,
+            '<' & '>' are literal, e.g. \g<0>
+            or \g<name> (not \g0 or \gname)
+
+Special character escapes are much like those already escaped in Python string
+literals. Hence regex '``\n``' is same as regex '``\\n``'::
+
+    \a  ASCII Bell (BEL)
+    \f  ASCII Formfeed
+    \n  ASCII Linefeed
+    \r  ASCII Carriage return
+    \t  ASCII Tab
+    \v  ASCII Vertical tab
+    \\  A single backslash
+    \xHH   Two digit hexadecimal character goes here
+    \OOO   Three digit octal char (or just use an
+           initial zero, e.g. \0, \09)
+    \DD    Decimal number 1 to 99, match
+           previous numbered group
+
+Extensions. Do not cause grouping, except '``P<name>``'::
+
+    (?iLmsux)     Match empty string, sets re.X flags
+    (?:...)       Non-capturing version of regular parens
+    (?P<name>...) Create a named capturing group.
+    (?P=name)     Match whatever matched prev named group
+    (?#...)       A comment; ignored.
+    (?=...)       Lookahead assertion, match without consuming
+    (?!...)       Negative lookahead assertion
+    (?<=...)      Lookbehind assertion, match if preceded
+    (?<!...)      Negative lookbehind assertion
+    (?(id)y|n)    Match 'y' if group 'id' matched, else 'n'
+
+Flags for re.compile(), etc. Combine with ``'|'``::
+
+    re.I == re.IGNORECASE   Ignore case
+    re.L == re.LOCALE       Make \w, \b, and \s locale dependent
+    re.M == re.MULTILINE    Multiline
+    re.S == re.DOTALL       Dot matches all (including newline)
+    re.U == re.UNICODE      Make \w, \b, \d, and \s unicode dependent
+    re.X == re.VERBOSE      Verbose (unescaped whitespace in pattern
+                            is ignored, and '#' marks comment lines)
+
+Module level functions::
+
+    compile(pattern[, flags]) -> RegexObject
+    match(pattern, string[, flags]) -> MatchObject
+    search(pattner, string[, flags]) -> MatchObject
+    findall(pattern, string[, flags]) -> list of strings
+    finditer(pattern, string[, flags]) -> iter of MatchObjects
+    split(pattern, string[, maxsplit, flags]) -> list of strings
+    sub(pattern, repl, string[, count, flags]) -> string
+    subn(pattern, repl, string[, count, flags]) -> (string, int)
+    escape(string) -> string
+    purge() # the re cache
+
+RegexObjects (returned from ``compile()``)::
+
+    .match(string[, pos, endpos]) -> MatchObject
+    .search(string[, pos, endpos]) -> MatchObject
+    .findall(string[, pos, endpos]) -> list of strings
+    .finditer(string[, pos, endpos]) -> iter of MatchObjects
+    .split(string[, maxsplit]) -> list of strings
+    .sub(repl, string[, count]) -> string
+    .subn(repl, string[, count]) -> (string, int)
+    .flags      # int, Passed to compile()
+    .groups     # int, Number of capturing groups
+    .groupindex # {}, Maps group names to ints
+    .pattern    # string, Passed to compile()
+
+MatchObjects (returned from ``match()`` and ``search()``)::
+
+    .expand(template) -> string, Backslash & group expansion
+    .group([group1...]) -> string or tuple of strings, 1 per arg
+    .groups([default]) -> tuple of all groups, non-matching=default
+    .groupdict([default]) -> {}, Named groups, non-matching=default
+    .start([group]) -> int, Start/end of substring match by group
+    .end([group]) -> int, Group defaults to 0, the whole match
+    .span([group]) -> tuple (match.start(group), match.end(group))
+    .pos       int, Passed to search() or match()
+    .endpos    int, "
+    .lastindex int, Index of last matched capturing group
+    .lastgroup string, Name of last matched capturing group
+    .re        regex, As passed to search() or match()
+    .string    string, "
+
