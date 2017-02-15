@@ -19,6 +19,12 @@ Tasks:
 
 	- http://nationalbank.kz/?furl=cursFull&switch=rus 
 
+	- http://kazfin.info/exchange/usd/
+
+	- http://allbanks.kz/exchange_offices/index/Almati/
+
+	- https://valuta.kz
+
 - get gasoline price
 	
 	- http://helios.kz/toplivo/tseny-na-benzin/
