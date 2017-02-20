@@ -1,6 +1,17 @@
 Lab #5
 ==================
 
+Preread
+_________________
+
+- HTML 5 Tutorial https://www.w3schools.com/html/default.asp
+
+- CSS Tutorial https://www.w3schools.com/css/default.asp
+
+- CSS Selectors https://www.w3schools.com/cssref/css_selectors.asp 
+
+
+
 Using requests and BeautifulSoup libraries:
 ______________
 
