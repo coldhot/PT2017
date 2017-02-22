@@ -1,0 +1,20 @@
+<settings>
+	<name>Dauren</name>
+	<surname>Yesmukhanov</surname>
+	<friends>
+		<person>
+			<name>Timur</name>
+		</person>
+		<person>
+			<name>Iskander</name>
+		</person>
+	</friends>
+	<enemies>
+		<person>
+			<name>Assel</name>
+		</person>
+		<person>
+			<name>Rashida</name>
+		</person>
+	</enemies>
+</settings>
