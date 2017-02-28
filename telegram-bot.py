@@ -34,10 +34,16 @@ def weather(bot, update):
 weather_handler = CommandHandler('weather', weather)
 dispatcher.add_handler(weather_handler)
 
+def echo(bot, update):
+	wtext = "Че там, %s" % update.message.from_user.first_name
+	bot.sendMessage(chat_id=update.message.chat_id, text=wtext)
+	print(update.message.from_user)
+
+from telegram.ext import MessageHandler, Filters
+echo_handler = MessageHandler(Filters.text, echo)
+dispatcher.add_handler(echo_handler)
+
 updater.start_polling()
-
-
-
 
 
 
