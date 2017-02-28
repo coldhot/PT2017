@@ -13,6 +13,12 @@ from telegram.ext import CommandHandler
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
 
+def salem(bot, update):
+	bot.sendMessage(chat_id=update.message.chat_id, text="Aleikum asalam!")
+	
+salem_handler = CommandHandler('salem', salem)
+dispatcher.add_handler(salem_handler)
+
 updater.start_polling()
 
 
